@@ -1,0 +1,9 @@
+{
+  "name": "Tmdb_web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/Tmdb_web",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project Tmdb_web --web",
+  "targets": {}
+}
