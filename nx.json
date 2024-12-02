@@ -35,6 +35,20 @@
       "options": {
         "targetName": "lint"
       }
+    },
+    {
+      "plugin": "@nx/expo/plugin",
+      "options": {
+        "startTargetName": "start",
+        "buildTargetName": "build",
+        "prebuildTargetName": "prebuild",
+        "serveTargetName": "serve",
+        "installTargetName": "install",
+        "exportTargetName": "export",
+        "submitTargetName": "submit",
+        "runIosTargetName": "run-ios",
+        "runAndroidTargetName": "run-android"
+      }
     }
   ],
   "generators": {
@@ -42,6 +56,11 @@
       "application": {
         "style": "css",
         "linter": "eslint"
+      }
+    },
+    "@nx/react": {
+      "library": {
+        "unitTestRunner": "none"
       }
     }
   }

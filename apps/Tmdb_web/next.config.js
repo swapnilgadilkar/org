@@ -1,6 +1,5 @@
 //@ts-check
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
 
 /**
@@ -16,7 +15,15 @@ const nextConfig = {
 
 const plugins = [
   // Add more Next.js plugins to this list if needed.
-  withNx,
+  withNx({
+    webpack: (config) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'react-native$': 'react-native-web',
+      };
+      return config;
+    },
+  }),
 ];
 
 module.exports = composePlugins(...plugins)(nextConfig);
